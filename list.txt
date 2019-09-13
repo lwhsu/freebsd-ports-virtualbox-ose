@@ -1,0 +1,5 @@
+emulators/virtualbox-ose
+emulators/virtualbox-ose-additions
+emulators/virtualbox-ose-additions-nox11
+emulators/virtualbox-ose-kmod
+emulators/virtualbox-ose-nox11
