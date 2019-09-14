@@ -103,9 +103,6 @@ VBOX_WITH_X11=
 
 .if ${COMPILER_TYPE} == clang
 EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-Config.kmk
-.if ${COMPILER_FEATURES:Mlibc++}
-EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-src-VBox-Additions-x11-VBoxClient-Makefile.kmk
-.endif
 .endif
 
 post-patch:
