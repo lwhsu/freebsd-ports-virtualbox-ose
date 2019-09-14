@@ -2,7 +2,7 @@
 
 PORTSDIR=/usr/ports
 
-PORT=emulators/virtualbox-ose
+PORTS=emulators/virtualbox-ose emulators/virtualbox-ose-additions
 
 set -ex
 
@@ -42,13 +42,15 @@ poudriere ports -c -f none -m null -M /usr/ports
 poudriere bulk -t -j jail net/nc
 
 cd /usr/ports
-cd ${PORT}
 PWD=`pwd -P`
 PORTDIR=`dirname ${PWD}`
-PORTDIR=`dirname ${PORTDIR}`
-make all-depends-list | sed -e "s,${PORTDIR}/,," | xargs sudo pkg fetch -y -o pkgs
-rm -fr /usr/local/poudriere/data/packages/jail-default/.latest/All
-mv pkgs/All /usr/local/poudriere/data/packages/jail-default/.latest/
-rm -fr pkgs
 
-poudriere testport -j jail ${PORT}
+for p in ${PORTS}
+do
+	cd ${p}
+	make all-depends-list | sed -e "s,${PORTDIR}/,," | \
+		xargs sudo pkg fetch -y \
+		-o /usr/local/poudriere/data/packages/jail-default/.latest/
+	poudriere testport -j jail ${p}
+	cd -
+done
