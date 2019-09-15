@@ -42,10 +42,10 @@ poudriere bulk -t -j jail net/nc
 cd /usr/ports
 for p in ${PORTS}
 do
-	make -f ${PORTSDIR}/Makefile all-depends-list | \
+	make -f ${PORTSDIR}/${p}/Makefile all-depends-list | \
 		sed -e "s,${PORTSDIR}/,," | \
 		xargs sudo pkg fetch -y \
 			-o /usr/local/poudriere/data/packages/jail-default/.latest/
-done
 
-poudriere testport -j jail ${PORTS}
+	poudriere testport -j jail ${p}
+done
