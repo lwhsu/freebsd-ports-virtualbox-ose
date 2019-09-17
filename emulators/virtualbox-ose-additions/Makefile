@@ -2,11 +2,11 @@
 # $FreeBSD: head/emulators/virtualbox-ose-additions/Makefile 511620 2019-09-09 11:01:13Z tobik $
 
 PORTNAME=	virtualbox-ose
-PORTVERSION=	6.0.12
+DISTVERSION=	6.1.0_BETA1
 CATEGORIES=	emulators
-MASTER_SITES=	https://download.oracle.com/virtualbox/${PORTVERSION}/
+MASTER_SITES=	https://download.virtualbox.org/virtualbox/${DISTVERSION}/
 PKGNAMESUFFIX?=	-additions
-DISTNAME=	VirtualBox-${PORTVERSION}
+DISTNAME=	VirtualBox-${DISTVERSION}
 
 MAINTAINER=	vbox@FreeBSD.org
 COMMENT=	VirtualBox additions for FreeBSD guests

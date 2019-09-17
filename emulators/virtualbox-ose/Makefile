@@ -2,11 +2,11 @@
 # $FreeBSD: head/emulators/virtualbox-ose/Makefile 511620 2019-09-09 11:01:13Z tobik $
 
 PORTNAME=	virtualbox-ose
-PORTVERSION=	6.0.12
+DISTVERSION=	6.1.0_BETA1
 CATEGORIES=	emulators
-MASTER_SITES=	https://download.oracle.com/virtualbox/${PORTVERSION}/
-DISTFILES=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
-EXTRACT_ONLY=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX}
+MASTER_SITES=	https://download.virtualbox.org/virtualbox/${DISTVERSION}/
+DISTFILES=	VirtualBox-${DISTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
+EXTRACT_ONLY=	VirtualBox-${DISTVERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	vbox@FreeBSD.org
 COMMENT=	General-purpose full virtualizer for x86 hardware
