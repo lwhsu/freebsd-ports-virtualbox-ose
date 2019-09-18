@@ -27,7 +27,6 @@ CPE_PRODUCT=	vm_virtualbox
 
 DISTINFO_FILE=	${.CURDIR}/../${PORTNAME}/distinfo
 PATCHDIR=	${.CURDIR}/../${PORTNAME}/files
-WRKSRC=		${WRKDIR}/VirtualBox-${PORTVERSION}
 MAKE_JOBS_UNSAFE=	yes
 
 HAS_CONFIGURE=	yes

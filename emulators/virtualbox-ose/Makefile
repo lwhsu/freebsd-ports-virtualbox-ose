@@ -26,7 +26,6 @@ RUN_DEPENDS=	${LOCALBASE}/etc/rc.d/vboxnet:emulators/virtualbox-ose-kmod
 CPE_VENDOR=	oracle
 CPE_PRODUCT=	vm_virtualbox
 
-WRKSRC=		${WRKDIR}/VirtualBox-${PORTVERSION}
 ONLY_FOR_ARCHS=	i386 amd64
 USES=		compiler:c++14-lang cpe gnome iconv pkgconfig ssl tar:bzip2 xorg
 USE_GNOME=	libidl libxml2

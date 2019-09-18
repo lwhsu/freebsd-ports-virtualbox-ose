@@ -22,7 +22,6 @@ CPE_PRODUCT=	vm_virtualbox
 USES=		cpe kmod tar:bzip2
 DISTINFO_FILE=	${.CURDIR}/../${PORTNAME}/distinfo
 PATCHDIR=	${.CURDIR}/../${PORTNAME}/files
-WRKSRC=		${WRKDIR}/VirtualBox-${PORTVERSION}
 USE_RC_SUBR=	vboxnet
 ONLY_FOR_ARCHS=	i386 amd64
 
