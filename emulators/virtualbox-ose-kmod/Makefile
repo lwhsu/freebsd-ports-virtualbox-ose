@@ -2,7 +2,7 @@
 # $FreeBSD: head/emulators/virtualbox-ose-kmod/Makefile 511620 2019-09-09 11:01:13Z tobik $
 
 PORTNAME=	virtualbox-ose
-DISTVERSION=	6.1.0_BETA1
+DISTVERSION=	6.1.0_BETA2
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.virtualbox.org/virtualbox/${DISTVERSION}/
 PKGNAMESUFFIX=	-kmod
